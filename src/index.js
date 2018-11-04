@@ -20,6 +20,7 @@ function convert(soldiers) {
 }
 
 function build(soldiers) {
+	throw Error('Testing Travis!')
 	let xcomSoldiers = convert(soldiers)
 
 	const fileBuilder = new XcomFileBuilder(xcomSoldiers.length)
