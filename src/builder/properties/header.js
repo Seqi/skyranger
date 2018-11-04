@@ -1,4 +1,4 @@
-let props = [
+module.exports = [
 	{
 		name: 'CharacterPool',
 		type: 'ArrayProperty',
@@ -14,5 +14,3 @@ let props = [
 		name: 'None'
 	}
 ]
-
-module.exports = props

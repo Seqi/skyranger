@@ -2,14 +2,13 @@ let XcomPropertyWriter = require('./property-writer')
 let generateSoldierProperties = require('./generate-soldier-props')
 
 let headerProps = require('./properties/header')
-let getAboutProps = require('./properties/about')
-let getAppearenceProps = require('./properties/appearence')
+let aboutProps = require('./properties/about')
+let appearenceProps = require('./properties/appearence')
 
 // Builds up all properties in an array, including header and all soldiers
 // and generate the final buffer for the file
 function FileBuilder() {
-	// Temp workaround - make this a function so the properties are reloaded each call
-	let getSoldierPropOptions = () => [...getAboutProps(), ...getAppearenceProps()]
+	let soldierPropOptions = [...aboutProps, ...appearenceProps]
 	let soldiersProperties = []
 
 	let soldierCount = 0
@@ -24,9 +23,7 @@ function FileBuilder() {
 	}
 
 	this.addSoldier = soldier => {
-		let soldierPropertyArray = generateSoldierProperties(soldier, getSoldierPropOptions())
-
-		// We don't want an array of an array of properties, so spread the array elements
+		let soldierPropertyArray = generateSoldierProperties(soldier, soldierPropOptions)
 		soldiersProperties.push(...soldierPropertyArray)
 		soldierCount++
 	}
