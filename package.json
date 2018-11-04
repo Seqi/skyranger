@@ -1,8 +1,8 @@
 {
     "name": "skyranger",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A Node.JS library for generating the relevant binary file for mass-importing custom soldier names into XCOM 2.",
-    "main": "index.js",
+    "main": "src/index.js",
     "scripts": {
         "test": "mocha",
         "lint": "eslint **/*.js"
