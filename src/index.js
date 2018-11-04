@@ -1,4 +1,5 @@
 let XcomFileBuilder = require('./builder/file-builder')
+let validateSoldiers = require('./validator')
 
 function convert(soldiers) {
 	const defaultOptions = {
@@ -20,6 +21,12 @@ function convert(soldiers) {
 }
 
 function build(soldiers) {
+	let error = validateSoldiers(soldiers)
+
+	if (error) {
+		throw new Error(error)
+	}
+
 	let xcomSoldiers = convert(soldiers)
 
 	const fileBuilder = new XcomFileBuilder(xcomSoldiers.length)

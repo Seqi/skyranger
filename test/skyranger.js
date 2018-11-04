@@ -34,4 +34,18 @@ describe('Skyranger', () => {
 		expect(soldierTwo.BackgroundText.val).to.equal('A bio')
 		expect(soldierTwo.iGender.val).to.equal(2)
 	})
+
+	it('should fail on an invalid soldier', () => {
+		let soldiers = [
+			{
+				firstName: 'One',
+				gender: 1
+			},
+			{
+				nickName: '2'
+			}
+		]
+
+		expect(() => skyranger(soldiers)).to.throw('first name is required')
+	})
 })
