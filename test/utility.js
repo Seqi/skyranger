@@ -35,9 +35,9 @@ describe('Utilities', () => {
 			expect(timestampParts[4]).to.have.lengthOf(5)
 			let timeParts = timestampParts[4].split(':')
 			expect(timeParts).to.have.lengthOf(2)
-			expect(Number(timeParts[0])).to.be.greaterThan(0)
-			expect(Number(timeParts[1])).to.be.lessThan(60)
+			expect(Number(timeParts[0])).to.be.greaterThan(-1)
 			expect(Number(timeParts[0])).to.be.lessThan(13)
+			expect(Number(timeParts[1])).to.be.lessThan(60)
 			expect(Number(timeParts[1])).to.be.greaterThan(-1)
 
 			expect(['AM', 'PM']).to.contain(timestampParts[5])
