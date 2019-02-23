@@ -64,7 +64,7 @@ fs.writeFile('MyCustomSoldiers.bin', soldiersBuffer, (err) => {
 })
 ```
 
-### Installation
+## Installation
 
 To use the generated binary file, you will need to drag the file into the game's Character Pool directory, and then
 import the soldiers for use in game. To do this:
@@ -77,3 +77,13 @@ import the soldiers for use in game. To do this:
 -   Click 'IMPORT ENTIRE POOL'
 -   Consider ensuring that "Use Character Pool Only" is selected if you wish only your custom soldiers to be selected
     in-game
+    
+ ## Roadmap
+ Skyranger is no longer being actively developed, however there are some features that would be great to implement.
+ 
+ - Better handling of UTF-8 characters in soldier names.
+ - Weighting to customisation options to better reflect how XCOM 2 generates soldiers.
+    
+ ## Contributing
+ 
+ There is a great amount of scope for improving Skyranger, and as such, any contributions are appreciated. 
