@@ -1,6 +1,6 @@
 {
     "name": "skyranger",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A Node.JS library for generating the relevant binary file for mass-importing custom soldier names into XCOM 2.",
     "main": "src/index.js",
     "scripts": {
@@ -27,7 +27,7 @@
     "homepage": "https://github.com/seqi/skyranger#readme",
     "devDependencies": {
         "chai": "^4.2.0",
-        "eslint": "^5.8.0",
+        "eslint": "^6.2.0",
         "mocha": "^5.2.0"
     }
 }
